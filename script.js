@@ -217,6 +217,91 @@
 // johnAthlete6.wonMedal();
 // johnAthlete6.calculateAge();
 
+// // ES5
+// var Person5=function(name,yearOfBirth,job){
+//     this.name=name;
+//     this.yearOfBirth=yearOfBirth;
+//     this.job=job;
+// }
+// Person5.prototype.calculateAge=function(){
+//     var age=new Date().getFullYear()-this.yearOfBirth;
+//     console.log(age);
+// }
+// var john=new Person5('John',2000,'Software engineer');
+// console.log(john);
+
+// // ES6
+// class Person6{
+//     constructor(name,yearOfBirth,job){
+//         this.name=name;
+//         this.yearOfBirth=yearOfBirth;
+//         this.job=job;
+//     }
+//     calculateAge(){
+//         var age=new Date().getFullYear()-this.yearOfBirth;
+//         console.log(age);
+//     }
+
+//     static greeting(){
+//         console.log(`Hi there`);
+//     }
+// }
+
+// const john6=new Person6('John',2000,'Software Engineer');
+// console.log(john6);
+// Person6.greeting();
+
+
+// // // --------------- CLASSES AND SUBCLASSES
+// //ES5
+// var Person5=function(name,yearOfBirth,job){
+//     this.name=name;
+//     this.yearOfBirth=yearOfBirth;
+//     this.job=job;
+// }
+// Person5.prototype.calculateAge=function(){
+//     var age=new Date().getFullYear()-this.yearOfBirth;
+//     console.log(age);
+// }
+// var Athelete5=function(name,yearOfBirth,job,olympicGames,medals){
+//     Person5.call(this,name,yearOfBirth,job);
+//     this.olympicGames=olympicGames;
+//     this.medals=medals;
+// }
+// Athelete5.prototype=Object.create(Person5.prototype);
+// Athelete5.prototype.wonMedals=function(){
+//     this.medals++;
+//     console.log(this.medals);
+// }
+// var athelete5=new Athelete5('Minh',2000,'Software Engineer',1,2);
+// console.log(athelete5);
+
+// ES6
+class Person6{
+    constructor(name,yearOfBirth,job){
+        this.name=name;
+        this.yearOfBirth=yearOfBirth;
+        this.job=job;
+    }
+    calculateAge(){
+        var age=new Date().getFullYear()-this.yearOfBirth;
+        console.log(age);
+    }
+}
+class Athelete6 extends Person6{
+    constructor(name,yearOfBirth,job,olympicGames,medals){
+        super(name,yearOfBirth,job);
+        this.olympicGames=olympicGames;
+        this.medals=medals;
+    }
+    wonMedal(){
+        this.medals++;
+        console.log(this.medals);
+    }
+}
+const johnAthlete6=new Athelete6('Minh',2000,'Software Engineer',2,5);
+johnAthlete6.calculateAge();
+johnAthlete6.wonMedal();
 
 
 // // // --------------- FINAL CHALLENGE
