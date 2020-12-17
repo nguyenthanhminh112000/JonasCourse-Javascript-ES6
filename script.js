@@ -127,6 +127,28 @@
 
 // console.log(question.get(ans===question.get('answer')));
 
+// const question = new Map();
+// question.set('question','What is the official name of latest Javascript version?');
+// question.set(1,'ES5');
+// question.set(2,'ES6');
+// question.set(3,'ES7');
+// question.set('correct',3);
+// question.set(true,'Correct answer');
+// question.set(false,'Wrong answer');
+// question.forEach((value,key)=>{
+//     console.log(`This is ${key} and it sets to ${value}`)
+// })
+
+// console.log(question.get('question'));
+// for(let [key,value] of question){
+//     if(typeof(key)==='number'){
+//         console.log(`Answer ${key} with value ${value}`);
+//     }
+// }
+
+// let ans=parseInt(prompt('Input the answer : '));
+// console.log(question.get(ans===question.get('correct')));
+
 // // --------------- CLASSES
 
 // // ES5
